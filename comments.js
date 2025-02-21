@@ -24,10 +24,3 @@ app.get('/comments', (req, res) => {
     const comments = readComments();
     res.json(comments);
 });
-
-// Add a new comment
-app.post('/comments', (req, res) => {
-    const comments = readComments();
-    const newComment = {
-        id: comments.length + 1,
-        text: req.body.text,
